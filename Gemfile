@@ -6,10 +6,8 @@ gem 'rails', '4.0.0'
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
 group :test do
-  gem "rspec-rails"
-end
-
-group :test do 
+	gem "rspec-rails", '~> 2.0'
+ 	gem 'shoulda-matchers' 
 	gem 'cucumber-rails'
 	gem 'database_cleaner'
 	gem 'capybara'
