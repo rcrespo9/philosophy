@@ -1,0 +1,4 @@
+<%= form_for @user do |f| %>
+	<%= f.select(:days, options_for_select(['0 days - $0', '7 days - $3500', '30 days - $15,000', '60 days - $30,000', '365 days - $182,500', '2000 days - $1,000,000', '+2000 days']))%>
+	<%= f.submit "Submit" %>
+<% end %>
