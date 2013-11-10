@@ -9,4 +9,10 @@ class UsersController < ApplicationController
 
 	def sample
 	end
+
+	def feeder
+		respond_to do |format|
+			format.json {render :json => :data}
+		end
+	end
 end
