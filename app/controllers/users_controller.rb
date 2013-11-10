@@ -11,9 +11,6 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def sample
-	end
-
 	def test_index
 		# request1 = request.env['HTTP_X_FORWARDED_FOR']
 		# binding.pry
