@@ -8,7 +8,7 @@ $(function(){
 	    slide: function(){
 			var days = parseInt($(this).val());
 
-			if (days > 2000) {
+			if (days == 2001) {
 				days = 2000 + "+"
 			};
 			
