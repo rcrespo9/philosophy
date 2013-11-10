@@ -3,10 +3,10 @@ class UsersController < ApplicationController
 	end
 
 	def receiver
-		@new_user = User.new(user_params)
-		@new_user.save
+		new_user = User.new(user_params)
+		new_user.save
 		respond_to do |format|
-			format.json {render :json => new_user.to_json}
+			format.json {render :json => params[:user].to_json}
 		end
 	end
 
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
 	private
 	def user_params
-		params.require(:new_user).permit(:gender, :value, :age, :stuff)
+		params.require(:user).permit(:gender, :value, :age)
 	end
 
 end
