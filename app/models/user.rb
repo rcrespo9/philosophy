@@ -1,7 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
-  field :age, type: Integer
+  field :age, type: String
   field :gender, type: String
   field :value, type: String
   field :remote_addr, type: String

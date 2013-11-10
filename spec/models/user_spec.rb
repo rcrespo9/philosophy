@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe User do 
 	before :each do 
-		@valid_age = 20
+		@valid_age = "under 21"
 		@valid_gender = "Male"
-		@valid_days = 30
+		@valid_value = "30"
 		@valid_remote_addr = "127.0.0.1"
 		@valid_remote_host = "127.0.0.1"
 		@valid_server_name = "localhost"
@@ -13,7 +13,7 @@ describe User do
 		@valid_http_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko)"
 		@valid_http_accept_language =  "en-US,en;q=0.8"
 
-		@user = User.create(age: @valid_age, gender: @valid_gender, days: @valid_days, remote_addr: @valid_remote_addr, remote_host: @valid_remote_host, server_name: @valid_server_name, server_port: @valid_server_port, http_host: @valid_http_host, http_user_agent: @valid_http_user_agent, http_accept_language: @valid_http_accept_language)
+		@user = User.create(age: @valid_age, gender: @valid_gender, value: @valid_value, remote_addr: @valid_remote_addr, remote_host: @valid_remote_host, server_name: @valid_server_name, server_port: @valid_server_port, http_host: @valid_http_host, http_user_agent: @valid_http_user_agent, http_accept_language: @valid_http_accept_language)
 		
 	end
 
@@ -29,9 +29,9 @@ describe User do
 			end
 		end
 
-		describe "User#days" do 
-			it "should return the correct amount of days" do 
-				@user.days.should eq(@valid_days)
+		describe "User#value" do 
+			it "should return the correct value" do 
+				@user.value.should eq(@valid_value)
 			end
 		end
 

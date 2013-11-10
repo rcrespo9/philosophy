@@ -3,5 +3,5 @@ Philosophy::Application.routes.draw do
   
   get '/sample' => "users#sample"
   post '/receiver' => "users#receiver"
-  get '/users/test_index' => "users#test_index"
+  get '/test_index' => "users#test_index"
 end
