@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require knob
+//= require slider
 //= require sample
 //= require_tree .

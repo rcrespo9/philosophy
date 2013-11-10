@@ -1,11 +1,20 @@
+// Wait until the document is ready
 $(function(){
-	$("#day_button").on("click", function() {
-		var day = $('#user_form option:selected').text();
-		alert(day);
-	});
+	// Initialise noUiSlider
+	$('.noUiSlider').noUiSlider({
+	    range: [0, 2001],
+	    start: 0,
+	    handles: 1,
+	    slide: function(){
+			var days = parseInt($(this).val());
 
-$(".dial").knob({
-    'min':0,
-    'max':7
-    });
+			if (days > 2000) {
+				days = 2000 + "+"
+			};
+			
+			$(this).next('h1').text(
+				days + ' days sold'
+			);					
+	   }
+	});
 });
