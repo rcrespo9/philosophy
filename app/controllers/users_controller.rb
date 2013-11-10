@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 	def receiver
 		new_user = User.new(user_params)
 		new_user.save
+
 		respond_to do |format|
 			format.json {render :json => params[:user].to_json}
 		end

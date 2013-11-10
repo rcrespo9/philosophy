@@ -5,11 +5,14 @@ function feedDB() {
 		url: '/receiver',
 		method: 'POST',
 		dataType: 'json',
-		data: {user: bla}
-	})
-	.done(function(data){
-		console.log(data);
+		data: {user: bla},
+		success: function() {
+			window.location = "http://localhost:3000/test_index";
+		}
 	});
+	// .done(function(data){
+	// 	console.log(data);
+	// });
 }
 
 function confirmSuccess() {
