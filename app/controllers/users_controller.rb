@@ -1,18 +1,27 @@
 class UsersController < ApplicationController
 	def home
-		@user = User.new(params[:days])
 	end
 
-	def create
-		@user = User.create
+	def receiver
+		@new_user = User.new(user_params)
+		@new_user.save
+		respond_to do |format|
+			format.json {render :json => new_user.to_json}
+		end
 	end
 
 	def sample
 	end
 
-	def feeder
-		respond_to do |format|
-			format.json {render :json => :data}
-		end
+	def test_index
+		# request1 = request.env['HTTP_X_FORWARDED_FOR']
+		# binding.pry
+		@users = User.all
 	end
+
+	private
+	def user_params
+		params.require(:new_user).permit(:gender, :value, :age, :stuff)
+	end
+
 end

@@ -1,12 +1,14 @@
-var days = {message: "feedback"};
+var stuff = {age: 30, value: "30", gender: "male"};
 
-function feedDB(days) {
+function feedDB() {
 	$.ajax({
-		method: "POST",
-		dataType: "json",
-		url: "/users/feeder",
-		data: days,
-		complete: confirmSuccess
+		url: '/receiver',
+		method: 'POST',
+		dataType: 'json',
+		data: stuff
+	})
+	.done(function(data){
+		console.log(data);
 	});
 }
 
