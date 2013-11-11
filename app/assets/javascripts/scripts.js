@@ -25,10 +25,14 @@ $(function(){
 		}
 	});
 
+	// submit onclick event
 	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());
 
-		var age = $('#age option:selected').text();
+		var age = $('#age option:selected').val();
+		if (age === ""){
+			alert("Please select an age range")
+		}
 		var gender = $('input[name=gender]:checked').val();
 
 		// send ajax POST request to server
@@ -45,6 +49,9 @@ $(function(){
 				}
 			});
 		}
+		var confirmation = confirm("Are you sure you want to proceed?");
+		if (age != '' && confirmation === true) {
 		feedDB();
+		}
 	});
 });
