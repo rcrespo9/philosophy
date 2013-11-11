@@ -1,16 +1,42 @@
-<div class="noUiSlider"></div>
+<body class="background">
 
-<h1 id="days"></h1>
+	<div class="container">
+		
+		<div id="home">
+			<div id="header">
+				<h1>Home Page</h1>
+			</div>
+		</div>
 
-<h1 id="money"></h2>
+		<div id="selector">
+			<div class="noUiSlider"></div>
+
+			<h1 id="days"></h1>
+
+			<h1 id="money"></h2>
 
 
-<%= radio_button_tag(:gender, "Male", class: 'gender') %>
-<%= label_tag(:gender, "Male") %>
-<br>
-<%= radio_button_tag(:gender, "Female", class: 'gender') %>
-<%= label_tag(:gender, "Female")%>
-<br>
-<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age")%>
-<br>
-<button id="submit_value">Submit</button>
+			<%= radio_button_tag(:gender, "Male", class: 'gender') %>
+			<%= label_tag(:gender, "Male") %>
+			<br>
+			<%= radio_button_tag(:gender, "Female", class: 'gender') %>
+			<%= label_tag(:gender, "Female")%>
+			<br>
+			<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age")%>
+			<br>
+			<button id="submit_value">Submit</button>
+		</div>
+
+	</div>
+
+	<div id="leftControl" class="control">
+		<img id="leftArrow" class="arrow left" style="width:60px" src="/assets/arrowleft2.png"></img>
+		<div id="leftText" class="dirText" style="float:right"> Test</div>
+	</div>
+
+	<div id="rightControl" class="control">
+		<img id="rightArrow" class="arrow right" style="width:60px" src="/assets/arrowright2.png"></img>
+		<div id="rightText" class="dirText" style="float:left"> Test</div>
+	</div>
+
+</body>

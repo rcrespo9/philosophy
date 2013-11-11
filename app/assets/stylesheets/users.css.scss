@@ -1,3 +1,49 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+	overflow:hidden;
+}
+
+.background{
+	background-color: grey;
+}
+
+.arrow{
+	opacity:0.2;
+}
+
+#header{
+	position:absolute;
+	left:40%;
+	top:100px;
+	width:650px;
+	height:500px;
+
+}
+
+.dirText{
+	color:black;
+	font-size:40px;
+	margin-top:45px;
+	opacity:0.0;
+}
+
+.control{
+	position:fixed;
+	width:170px;
+	cursor:pointer;
+}
+
+#rightControl{
+	right:0px;
+	top:40%;
+}
+
+#leftControl{
+	left:0px;
+	top:40%;
+}
+
