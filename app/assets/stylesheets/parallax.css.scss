@@ -3,12 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body{
-	overflow:hidden;
-}
-
 .background{
 	background-color: grey;
+	overflow: hidden;
 }
 
 .arrow{
@@ -36,5 +33,13 @@ body{
 #leftControl{
 	left:0px;
 	top:40%;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
 }
 

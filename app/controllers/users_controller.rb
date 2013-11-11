@@ -140,6 +140,9 @@ class UsersController < ApplicationController
 		@users = User.all
 	end
 
+	def chart
+	end
+
 	private
 	def user_params
 		params.require(:user).permit(:gender, :value, :age)
