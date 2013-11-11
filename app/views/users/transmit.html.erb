@@ -1,0 +1,28 @@
+<h3><% @males.each do |male| %></h3>
+<ul>
+	<li><%= male.gender %></li>
+	<li><%= male.age %></li>
+	<li><%= male.value %></li>
+	<li><%= male.created_at %></li>
+</ul>
+<% end %>
+
+<br>
+<hr>
+<h3><% @males_under21_formatted.each do |male_under21| %></h3>
+<ul>
+	<li><%= male_under21.gender %></li>
+	<li><%= male_under21.age %></li>
+	<li><%= male_under21.value %></li>
+	<li><%= male_under21.created_at %></li>
+</ul>
+<% end %>
+
+<h1></h1>
+
+
+<br>
+<hr>
+<h3>Total # of males under 21: <%= @males_under21_formatted.count %></h3>
+<br>
+<h3>The avg value of males under 21 is: <%= @males_under21_avg %></h3>
