@@ -1,28 +1,44 @@
-<h3><% @males.each do |male| %></h3>
+<h1>Males</h1>
+	<% @males.each do |male| %>
 <ul>
 	<li><%= male.gender %></li>
 	<li><%= male.age %></li>
-	<li><%= male.value %></li>
-	<li><%= male.created_at %></li>
+	<li><%= male.value.to_i %></li>
 </ul>
 <% end %>
-
 <br>
-<hr>
-<h3><% @males_under21_formatted.each do |male_under21| %></h3>
+<h3>Males under 21</h3>
+<% @males_under21.each do |male_under21| %>
 <ul>
 	<li><%= male_under21.gender %></li>
 	<li><%= male_under21.age %></li>
-	<li><%= male_under21.value %></li>
-	<li><%= male_under21.created_at %></li>
+	<li><%= male_under21.value.to_i %></li>
 </ul>
 <% end %>
-
-<h1></h1>
-
-
 <br>
+<h1>Males Array: <%= @males_array %> </h1>
 <hr>
-<h3>Total # of males under 21: <%= @males_under21_formatted.count %></h3>
 <br>
-<h3>The avg value of males under 21 is: <%= @males_under21_avg %></h3>
+
+
+<h1>Females</h1>
+	<% @females.each do |female| %>
+<ul>
+	<li><%= female.gender %></li>
+	<li><%= female.age %></li>
+	<li><%= female.value.to_i %></li>
+</ul>
+<% end %>
+<br>
+<h3>Females under 21</h3>
+<% @females_under21.each do |female_under21| %>
+<ul>
+	<li><%= female_under21.gender %></li>
+	<li><%= female_under21.age %></li>
+	<li><%= female_under21.value.to_i %></li>
+</ul>
+<% end %>
+<br>
+<h1>Females Array: <%= @females_array %> </h1>
+<hr>
+<br>
