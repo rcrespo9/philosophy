@@ -1,4 +1,3 @@
-var bla = {age: "30", value: "30 days", gender: "male"};
 
 // Wait until the document is ready
 $(function(){
@@ -24,36 +23,31 @@ $(function(){
 				money + ' earned'
 			);
 		}
-
 	});
 
-	$('#submit_value').on("click", function() {
+	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());
-			if (days == "2001") {
-				days = "+2000";
-			}
-		alert(days);
+		if (days == "2001") {
+			days = "+2000";
+		}
 
 		var age = $('#age option:selected').text();
-		alert(age);
-
 		var gender = $('input[name=gender]:checked').val();
-		alert(gender);
+
+		// send ajax POST request to server
+		function feedDB() {
+			$.ajax({
+				url: '/receiver',
+				method: 'POST',
+				dataType: 'json',
+				data: {user: {age: age, gender: gender, value: days }},
+
+				// callback function performs redirect
+				success: function() {
+					window.location = "http://localhost:3000/test_index";
+				}
+			});
+		}
+		feedDB();
 	});
 });
-
-
-// send ajax POST request to server
-function feedDB() {
-	$.ajax({
-		url: '/receiver',
-		method: 'POST',
-		dataType: 'json',
-		data: {user: bla},
-
-	// callback function performs redirect
-		success: function() {
-			window.location = "http://localhost:3000/test_index";
-		}
-	});
-}
