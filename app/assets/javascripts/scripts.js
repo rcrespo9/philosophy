@@ -33,13 +33,10 @@ $(function(){
 		}
 
 		var age = $('#age option:selected').val();
-		if (age == ""){
+		if (age === ""){
 			alert("Please select an age range")
 		}
 		var gender = $('input[name=gender]:checked').val();
-		if (gender != 'checked'){
-			alert("Please select gender")
-		}
 
 		// send ajax POST request to server
 		function feedDB() {
@@ -55,7 +52,8 @@ $(function(){
 				}
 			});
 		}
-		if (age != '' && gender == 'checked') {
+		var confirmation = confirm("Are you sure you want to proceed?");
+		if (age != '' && confirmation === true) {
 		feedDB();
 		}
 	});
