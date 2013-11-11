@@ -26,7 +26,7 @@ $(function(){
 
 	//Setting up page navigation
 	parallax.home.onload=function(){
-		setRight("selector", "Selector");
+		setRight("selector", "Start");
 	};
 
 	parallax.selector.onload=function(){

@@ -5,4 +5,5 @@ Philosophy::Application.routes.draw do
   post '/receiver' => "users#receiver"
   get '/test_index' => "users#test_index"
   get '/transmit' => "users#transmit"
+  get '/chart' => "users#chart"
 end

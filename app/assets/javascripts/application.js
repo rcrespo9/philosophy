@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require chart
+//= require knob
 //= require parallax
 //= require slider
 //= require_tree .
