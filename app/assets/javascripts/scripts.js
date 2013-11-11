@@ -37,6 +37,9 @@ $(function(){
 			alert("Please select an age range")
 		}
 		var gender = $('input[name=gender]:checked').val();
+		if (gender != 'checked'){
+			alert("Please select gender")
+		}
 
 		// send ajax POST request to server
 		function feedDB() {
@@ -52,7 +55,7 @@ $(function(){
 				}
 			});
 		}
-		if (age != "") {
+		if (age != '' && gender == 'checked') {
 		feedDB();
 		}
 	});
