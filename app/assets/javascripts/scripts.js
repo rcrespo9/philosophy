@@ -49,9 +49,11 @@ $(function(){
 				}
 			});
 		}
+		if (age != '') {
 		var confirmation = confirm("Are you sure you want to proceed?");
-		if (age != '' && confirmation === true) {
-		feedDB();
+			if (confirmation == true) {
+			feedDB();
+			}
 		}
 	});
 });
