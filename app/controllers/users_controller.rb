@@ -3,9 +3,17 @@ class UsersController < ApplicationController
 	end
 
 	def receiver
-		new_user = User.new(user_params)
-		new_user.save
 
+		remote_address = request.env["REMOTE_ADDR"]
+		remote_host = request.env["REMOTE_HOST"]
+		server_name = request.env["SERVER_NAME"]
+		server_port = request.env["SERVER_PORT"]
+		http_host = request.env["HTTP_HOST"]
+		http_user_agent = request.env["HTTP_USER_AGENT"]
+		http_accept_language = request.env["HTTP_ACCEPT_LANGUAGE"]
+
+		new_user = User.new(user_params)
+		new_user.update_attributes(remote_addr: remote_address, remote_host: remote_host, server_name: server_name, server_port: server_port, http_host: http_host, http_user_agent: http_user_agent, http_accept_language: http_accept_language)
 		respond_to do |format|
 			format.json {render :json => params[:user].to_json}
 		end
@@ -129,8 +137,6 @@ class UsersController < ApplicationController
 	end
 
 	def test_index
-		# request1 = request.env['HTTP_X_FORWARDED_FOR']
-		# binding.pry
 		@users = User.all
 	end
 
