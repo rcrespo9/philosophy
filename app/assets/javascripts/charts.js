@@ -14,9 +14,6 @@ function payloadReceiver() {
 		success: function(data) {
 			female_array = data.female_data;
 			male_array = data.male_data;
-			console.log("payload received");
-			console.log(female_array)
-			console.log(male_array)
 			createChart();
 		}
 	});

@@ -128,7 +128,6 @@ function feedDB() {
 		dataType: 'json',
 		data: {user: {age: age, gender: gender, value: days }},
 		success: function() {
-			console.log("feed complete");
 			window.location = "./chart";
 		}
 	});
