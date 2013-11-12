@@ -17,4 +17,4 @@
 //= require knob
 //= require parallax
 //= require slider
-//= require_tree .
+// require_tree .

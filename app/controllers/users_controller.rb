@@ -122,8 +122,8 @@ class UsersController < ApplicationController
 		@females_over65_avg = females_over65_total || 0 / females_over65.count
 
 		# Establish arrays to seed to chartJS
-		@males_array = [@males_under21_avg, @males21_to_25_avg, @males26_to_30_avg, @males31_to_35_avg, @males31_to_35_avg, @males36_to_40_avg, @males41_to_45_avg, @males46_to_50_avg, @males51_to_55_avg, @males56_to_60_avg, @males61_to_65_avg, @males_over65_avg]
-		@females_array = [@females_under21_avg, @females21_to_25_avg, @females26_to_30_avg, @females31_to_35_avg, @females31_to_35_avg, @females36_to_40_avg, @females41_to_45_avg, @females46_to_50_avg, @females51_to_55_avg, @females56_to_60_avg, @females61_to_65_avg, @females_over65_avg]
+		@males_array = [@males_under21_avg, @males21_to_25_avg, @males26_to_30_avg, @males31_to_35_avg, @males36_to_40_avg, @males41_to_45_avg, @males46_to_50_avg, @males51_to_55_avg, @males56_to_60_avg, @males61_to_65_avg, @males_over65_avg]
+		@females_array = [@females_under21_avg, @females21_to_25_avg, @females26_to_30_avg, @females31_to_35_avg, @females36_to_40_avg, @females41_to_45_avg, @females46_to_50_avg, @females51_to_55_avg, @females56_to_60_avg, @females61_to_65_avg, @females_over65_avg]
 
 		payload = {
 			male_data: @males_array,

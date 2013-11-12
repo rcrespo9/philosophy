@@ -23,7 +23,6 @@ $(function(){
 		$(".control").hide();
 	};
 
-
 	//Setting up page navigation
 	parallax.home.onload=function(){
 		setRight("selector", "Start");
@@ -32,7 +31,6 @@ $(function(){
 	parallax.selector.onload=function(){
 		setLeft("home", "Home");
 	};
-
 
 	//Sets the correct triggers for the arrows, plus arrow keys
 	function setRight(page, text){
@@ -106,24 +104,10 @@ $(function(){
 
 		var age = $('#age option:selected').val();
 		if (age === ""){
-			alert("Please select an age range")
+			alert("Please select an age range");
 		}
 		var gender = $('input[name=gender]:checked').val();
 
-		// send ajax POST request to server
-		function feedDB() {
-			$.ajax({
-				url: '/receiver',
-				method: 'POST',
-				dataType: 'json',
-				data: {user: {age: age, gender: gender, value: days }},
-
-				// callback function performs redirect
-				success: function() {
-					window.location = "http://localhost:3000/test_index";
-				}
-			});
-		}
 		if (age != '') {
 		var confirmation = confirm("Are you sure you want to proceed?");
 			if (confirmation == true) {
@@ -132,3 +116,20 @@ $(function(){
 		}
 	});
 });
+
+// send ajax POST request to server
+function feedDB() {
+	var days = parseInt($('.noUiSlider').val());
+	var age = $('#age option:selected').val();
+	var gender = $('input[name=gender]:checked').val();
+	$.ajax({
+		url: '/receiver',
+		method: 'POST',
+		dataType: 'json',
+		data: {user: {age: age, gender: gender, value: days }},
+		success: function() {
+			console.log("feed complete");
+			window.location = "./chart";
+		}
+	});
+}
