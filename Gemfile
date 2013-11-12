@@ -8,7 +8,7 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 group :test do
 	gem "rspec-rails", '~> 2.0'
  	gem 'shoulda-matchers' 
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', :require => false
 	gem 'database_cleaner'
 	gem 'capybara'
 end
