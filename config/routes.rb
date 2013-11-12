@@ -3,7 +3,7 @@ Philosophy::Application.routes.draw do
   
   get '/sample' => "users#sample"
   post '/receiver' => "users#receiver"
-  get '/test_index' => "users#test_index"
   get '/transmit' => "users#transmit"
   get '/chart' => "users#chart"
+
 end
