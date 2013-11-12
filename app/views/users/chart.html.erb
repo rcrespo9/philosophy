@@ -1,29 +1,22 @@
-<%= javascript_include_tag "charts", "data-turbolinks-track" => true %>
+<!-- social media icons -->
+<span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+<span class='st_email_large' displayText='Email'></span>
+<!-- social media icons end -->
+
+<!-- line chart -->
 <canvas id="canvas" height="450" width="600"></canvas>
+<!-- line chart end -->
 
+<!-- disqus comment section -->
+<div id="disqus_thread"></div>
+<!-- disqus comment section end -->
 
-<script>
-// // line graph
-// var lineChartData = {
-//         labels : ["under 21","21-25","26-30","31-35","36-40","41-45","46-50", "51-55", "56-60", "61-65", "65+"],
-//         datasets : [
-//                 {
-//                         fillColor : "rgba(220,220,220,0.5)",
-//                         strokeColor : "rgba(220,220,220,1)",
-//                         pointColor : "rgba(220,220,220,1)",
-//                         pointStrokeColor : "#fff",
-//                         data : female_array
-//                 },
-//                 {
-//                         fillColor : "rgba(151,187,205,0.5)",
-//                         strokeColor : "rgba(151,187,205,1)",
-//                         pointColor : "rgba(151,187,205,1)",
-//                         pointStrokeColor : "#fff",
-//                         data : male_array
-//                 }
-//         ]
-        
-// }
-
-// var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
-// </script>
+<%= javascript_include_tag "charts", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "disqus", "data-turbolinks-track" => true %>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "4ed9e27d-b2ec-4492-b592-fbc3e5b00d84", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+    
