@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 	end
 
 	def receiver
-
 		remote_address = request.env["REMOTE_ADDR"]
 		remote_host = request.env["REMOTE_HOST"]
 		server_name = request.env["SERVER_NAME"]
@@ -102,8 +101,7 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def test_index
-		@users = User.all
+	def chart
 	end
 
 ###################################################
@@ -124,27 +122,7 @@ class UsersController < ApplicationController
 	rescue
 		0
 	end
-###################################################
-	def chart
-	end
-
-	def testing
-		# @males_under21 = User.where(gender: "Male", age: "under 21")
-		# @males_under21_total = get_total(@males_under21)
-		# @males_under21_count = @males_under21.count || 0
-		# @males_under21_avg = avg_me(@males_under21_total, @males_under21_count)	
-
-		# @males21_to_25 = User.where(gender: "Male", age: "21-25")
-		# @males21_to_25_total = get_total(@males21_to_25)
-		# @males21_to_25_count = @males21_to_25.count || 0
-		# @males21_to_25_avg = avg_me(@males21_to_25_total, @males21_to_25_count)
-
-		@males26_to_30 = User.where(gender: "Male", age: "26-30")
-		@males26_to_30_count = @males26_to_30.count || 0
-		@males26_to_30_total = get_total(@males26_to_30)
-		@males26_to_30_avg = avg_me(@males26_to_30_total, @males26_to_30_count)
-	end
-
+###########################################################
 
 	private
 	def user_params

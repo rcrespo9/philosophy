@@ -82,7 +82,6 @@ $(function(){
 		slide: function(){
 			var days = parseInt($(this).val());
 			var money = "$" + parseInt($(this).val()) * 500;
-
 			if (days == "2001" && money > "$1000000") {
 				days = "+2000";
 				money = "+$1000000";
@@ -101,7 +100,6 @@ $(function(){
 	// submit onclick event
 	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());
-
 		var age = $('#age option:selected').val();
 		if (age === ""){
 			alert("Please select an age range");
