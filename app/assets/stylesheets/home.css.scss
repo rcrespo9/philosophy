@@ -1,13 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn|Droid+Serif);
+
 .background {
-	color: #fff;
+	color: #00c690;
 }
 
 #home {
-	background: url(future-room.jpg) center center fixed no-repeat;
+/*	background: url(moon-cold-lake-reflections.jpg) center center fixed no-repeat;
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-   background-size: cover;
+   background-size: cover;*/
+   border: solid 10px #00c690;
+   background-color: #051b24;
    height: 100%;
    width: 100%;
+}
+
+#marketing {
+/*	width:400px;
+  	height:180px;*/
+  	font-family: 'Vollkorn', serif;
+  	font-weight: bold;
+  	font-size: 6em;
+	margin-top: 15%;
+}
+
+.lead{
+	font-family: 'Droid Serif', serif;
+	font-size: 2.3em;
 }
