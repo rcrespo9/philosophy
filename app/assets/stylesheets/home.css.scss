@@ -1,24 +1,36 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn|Droid+Serif);
-
-.background {
-}
+@import url(http://fonts.googleapis.com/css?family=Cabin|PT+Sans);
+$home-color: #fff;
+$background-color: #051b24;
+$headerfont: 'Cabin', sans-serif; 
+$bodyfont: 'PT Sans', sans-serif;
+$border: solid 10px $home-color;
 
 #home {
-   color: #00c690;
-   border: solid 10px #00c690;
-   background-color: #051b24;
-   height: 100%;
-   width: 100%;
-}
+   color: $home-color;
+/*   border: $border;
+   background-color: $background-color;*/
+   min-height: 100%;
+   min-width: 100%;
+   background-repeat: no-repeat;
+   background-position: fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
 
-#marketing {
-  	font-family: 'Vollkorn', serif;
+   #marketing {
+  	font-family: $headerfont;
   	font-weight: bold;
-  	font-size: 6em;
+  	font-size: 4em;
+  	text-transform: uppercase;
 	margin-top: 15%;
+	text-shadow: 0 0 8px rgba(255,255,255,0.5);
+	}
+
+	.lead {
+		font-family: $bodyfont;
+		font-size: 1.7em;
+		text-shadow: 0 0 8px rgba(255,255,255,0.5);
+	}
 }
 
-.lead{
-	font-family: 'Droid Serif', serif;
-	font-size: 2.3em;
-}

@@ -130,3 +130,10 @@ function feedDB() {
 		}
 	});
 }
+
+// background slide
+$("#home").backstretch([
+    "./assets/earthreflection.jpg", 
+    "./assets/moonreflection.jpg",
+    "./assets/future-room.jpg"   
+  ], {duration: 4000, fade: 750, centeredX: true});
