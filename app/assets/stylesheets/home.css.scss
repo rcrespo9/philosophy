@@ -1,15 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Vollkorn|Droid+Serif);
 
 .background {
-	color: #00c690;
 }
 
 #home {
-/*	background: url(moon-cold-lake-reflections.jpg) center center fixed no-repeat;
- -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-   background-size: cover;*/
+   color: #00c690;
    border: solid 10px #00c690;
    background-color: #051b24;
    height: 100%;
@@ -17,8 +12,6 @@
 }
 
 #marketing {
-/*	width:400px;
-  	height:180px;*/
   	font-family: 'Vollkorn', serif;
   	font-weight: bold;
   	font-size: 6em;
