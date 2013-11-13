@@ -1,5 +1,9 @@
-Given(/^I visit the homepage$/) do
-	visit '/'
+Given(/^I visit '(\w+)'$/) do |x|
+	if x != "home"
+		visit '/'+x.to_s
+	else
+		visit "/"
+	end
 end
 
 Given(/^I click the right arrow image$/) do
