@@ -20,6 +20,8 @@
 
 .info {
 	margin-top: 7.5%;
+	clear: both;
+	display: inline-block;
 }
 
 .age-dropdown {
@@ -37,4 +39,23 @@
 
 .gender-label {
 	font-size: 1.3em;
+}
+
+#submit-button {
+}
+
+button {
+	display: block;
+	width: 150px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #193441;
+	font-size: 13px;
+	padding: 20px 25px;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 1px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
