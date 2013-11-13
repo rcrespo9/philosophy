@@ -10,15 +10,16 @@
 		</div>
 
 		<div id="selector">
-			<div class="container selection">
-				<div class="row">
+			<div class="container-fluid selection">
+				<div class="row-fluid">
 					<h1 class="col-lg-12 text-center" id="selection-header">Make Your Choice</h1>
+
 					
-					<div class="value-slider col-md-6 col-md-offset-3">
+					<div class="value-slider col-lg-12 col-lg-offset-4">
 						<div class="noUiSlider"></div>
 				    </div>
 				    
-				    <div class="info col-md-6 col-md-offset-3 span6">
+				    <div class="info col-lg-6 col-md-offset-3">
 					    <div class="age-dropdown">
 					    	<p class="gender-header">Select your age range.</p>
 					    	<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age")%>
@@ -31,12 +32,15 @@
 							<%= radio_button_tag(:gender, "Female", class: 'gender') %>
 							<%= label_tag(:gender, "Female", class: 'gender-label')%>
 					    </div>
-					    <div class="row">
-						    <div id="submit-button">
-						    	<button id="submit_value">Submit</button>
-						    </div>
-					    </div>
 				    </div>
+				</div>
+			</div>
+			
+			<div class="container-fluid button">
+				<div class="row-fluid">
+					<div id="submit-button">
+					    <button id="submit_value">Submit</button>
+					</div>
 				</div>
 			</div>
 
