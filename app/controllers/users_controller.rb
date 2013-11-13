@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 		new_user.http_accept_language = http_accept_language
 
 
-		# Perform cookie check, if cookie exists, mark the user instance as flagged.
+		# Perform cookie check, if cookie exists, flag the user instance.
 		if cookies['voted_on']
 			new_user.flagged = true
 		else
@@ -139,7 +139,7 @@ class UsersController < ApplicationController
 	end
 
 ###################################################
-	## Helper methods called under transmit action
+	## Helper methods called within transmit action
 
 	# Returns sum of queries as integer
 	def get_total(mongoid_objects)

@@ -7,3 +7,17 @@ Feature: Parallax home page
 		And I click the right arrow image
 
 		Then the screen is shifted to the next slide
+
+
+	Scenario: Submit my data from the homepage via click button and then redirect to a different URL.
+		Given I visit the homepage
+
+		And I choose an age group
+
+		And I choose a gender
+
+		And I select a value
+
+		When I press submit
+
+		Then I should be redirected to the charts URL
