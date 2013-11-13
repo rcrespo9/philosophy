@@ -11,12 +11,6 @@
 	opacity:0.2;
 }
 
-.dirText{
-	font-size:40px;
-	margin-top:45px;
-	opacity:0.0;
-}
-
 .control{
 	position:fixed;
 	width:170px;
@@ -25,7 +19,7 @@
 
 #rightControl{
 	right:17px;
-	top:43%;
+	top:30%;
 }
 
 #leftControl{
@@ -41,3 +35,9 @@
 	float: left;
 }
 
+/*media queries*/
+@media (max-width: 480px) {
+  #rightControl {
+     top: 80%;
+  }
+}

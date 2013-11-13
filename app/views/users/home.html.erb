@@ -3,8 +3,10 @@
 	<div class="container">
 		
 		<div id="home">
-			<h1 class="text-center" id="marketing">The Mirror Paradox</h1>
-			<p class="text-center lead">Sell your future for a lavish present.</p>
+			<div class="col-lg-12">
+				<h1 class="text-center" id="marketing">The Mirror Paradox</h1>
+				<p class="text-center lead">Would you sell your future for a lavish present?</p>
+			</div>
 		</div>
 
 		<div id="selector">
@@ -30,12 +32,10 @@
 
 	<div id="leftControl" class="control">
 		<img id="leftArrow" class="arrow left" style="width:60px" src="/assets/arrowleft2.png"></img>
-		<div id="leftText" class="dirText" style="float:right"> Test</div>
 	</div>
 
-	<div id="rightControl" class="control">
-		<img id="rightArrow" class="arrow right" style="width:60px" src="/assets/arrowright.png"></img>
-		<!-- <div id="rightText" class="dirText" style="float:left"> Test</div> -->
+	<div id="rightControl" class="control col-md-8">
+		<img id="rightArrow" class="arrow right" style="width:60px" src="/assets/arrowright2.png"></img>
 	</div>
 
     <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
