@@ -286,10 +286,10 @@ window.Chart = function(context){
         
                 chart.Line.defaults = {
                         scaleOverlay : false,
-                        scaleOverride : false,
-                        scaleSteps : null,
-                        scaleStepWidth : null,
-                        scaleStartValue : null,
+                        scaleOverride : true,
+                        scaleSteps : 40,
+                        scaleStepWidth : 50,
+                        scaleStartValue : 0,
                         scaleLineColor : "rgba(0,0,0,.1)",
                         scaleLineWidth : 1,
                         scaleShowLabels : true,
