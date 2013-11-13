@@ -4,11 +4,10 @@ $background-color: #051b24;
 $headerfont: 'Cabin', sans-serif; 
 $bodyfont: 'PT Sans', sans-serif;
 $border: solid 10px $home-color;
+$marketing-shadow: 0 0 8px rgba(255,255,255,0.5);
 
 #home {
    color: $home-color;
-/*   border: $border;
-   background-color: $background-color;*/
    min-height: 100%;
    min-width: 100%;
    background-repeat: no-repeat;
@@ -24,13 +23,13 @@ $border: solid 10px $home-color;
   	font-size: 4em;
   	text-transform: uppercase;
 	margin-top: 15%;
-	text-shadow: 0 0 8px rgba(255,255,255,0.5);
+	text-shadow: $marketing-shadow;
 	}
 
 	.lead {
 		font-family: $bodyfont;
 		font-size: 1.7em;
-		text-shadow: 0 0 8px rgba(255,255,255,0.5);
+		text-shadow: $marketing-shadow;
 	}
 }
 

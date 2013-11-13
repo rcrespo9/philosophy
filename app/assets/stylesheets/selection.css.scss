@@ -1,8 +1,40 @@
 @import 'home';
 
 #selector {
-	background-color: $background-color;
-	height: 100%;
-	width: 100%;
-	border: $border;
+	background-color: #fff;
+	min-height: 100%;
+	min-width: 100%;
+	font-family: $bodyfont;
+	color: #333745;
+}
+
+#selection-header {
+	font-family: $headerfont;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+.value-slider {
+	margin-top: 17%;
+}
+
+.info {
+	margin-top: 7.5%;
+}
+
+.age-dropdown {
+	float: left;
+}
+
+.gender-div {
+	float: right;
+}
+
+.gender-header {
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+.gender-label {
+	font-size: 1.3em;
 }

@@ -22,11 +22,9 @@
  *		width or height on the slider.
  */
 	.noUi-base {
-		width: 500px;
+		width: 550px;
 		height: 40px;
 		position: absolute;
-		max-width: 100%;
-		max-height: 100%;
 		border: 1px solid #BFBFBF;
 		z-index: 1;
 	}
@@ -60,10 +58,10 @@
  *		for various states of the slider.
  */
 	.noUi-connect {
-		background: Teal;
+		background: teal;
 	}
 	.noUi-background {
-		background: #DDD;
+		background: #193441;
 	}
 
 /*	Functional styles for handle positioning;
