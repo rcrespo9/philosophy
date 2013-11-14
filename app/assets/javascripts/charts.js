@@ -43,7 +43,8 @@ function createChart() {
 
 	var chartOptions = {
 		scaleFontColor: '#333745',
-		scaleLineColor: "rgba(51,55,69,.1)"
+		scaleLineColor: "rgba(51,55,69,.1)",
+		scaleFontFamily : "'Cabin'",
 	};
 	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData, chartOptions);
 }
