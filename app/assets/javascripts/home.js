@@ -88,15 +88,14 @@ $(function(){
 			}
 			
 			$(this).next('#days').text(
-				days + ' days sold'
+				'You will be selling ' + days + ' days for'
 			);
 
 			$(this).nextAll('#money').text(
-				money + ' earned'
+				'a grand total of ' + money + '.'
 			);
 		}
 	});
-
 	// submit onclick event
 	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());
@@ -137,3 +136,4 @@ $("#home").backstretch([
     "./assets/moonreflection.jpg",
     "./assets/future-room.jpg"   
   ], {duration: 2000, fade: 750, centeredX: true});
+

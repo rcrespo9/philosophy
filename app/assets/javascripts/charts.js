@@ -25,9 +25,9 @@ function createChart() {
 		labels : ["under 21","21-25","26-30","31-35","36-40","41-45","46-50", "51-55", "56-60", "61-65", "65+"],
 		datasets : [
 			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
+				fillColor : "rgba(214,102,80,0.5)",
+				strokeColor : "rgba(214,102,80,1)",
+				pointColor : "rgba(214,102,80,1)",
 				pointStrokeColor : "#fff",
 				data : female_array
 			},
@@ -38,7 +38,10 @@ function createChart() {
 				pointStrokeColor : "#fff",
 				data : male_array
 			}
-		]
+		],
 	};
-	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+
+	var chartOptions = {
+	};
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData, chartOptions);
 }

@@ -16,14 +16,19 @@ $selectioncolor: #333745;
 }
 
 .value-slider {
-	margin-top: 14%;
+	margin-top: 10%;
 }
 
 .info {
-	margin-top: 5%;
+	margin-top: 8%;
 	clear: both;
 	display: inline-block;
 	padding-left: 55px;
+	position: absolute;
+}
+
+#money {
+	line-height: 4em;
 }
 
 .age-dropdown {
@@ -43,11 +48,17 @@ $selectioncolor: #333745;
 	font-size: 1.3em;
 }
 
+.numbers {
+	position: absolute;
+	margin-left: 500px;
+	font-size: 1.6em;
+}
+
 #submit-button {
 	position: absolute;
 	clear: both;
 	margin-left: 45%;
-	margin-top: 17%;
+	margin-top: 21%;
 }
 
 button {

@@ -13,12 +13,16 @@
 			<div class="container-fluid selection">
 				<div class="row-fluid">
 					<h1 class="col-lg-12 text-center" id="selection-header">Make Your Choice</h1>
+					<!-- Button trigger modal -->
+				<button class="submit-button" data-toggle="modal" data-target="#myModal">
+				  Read me
+				</button>
 
 					
 					<div class="value-slider col-lg-12 col-lg-offset-4">
 						<div class="noUiSlider"></div>
-						<h2 class="text-center" id="days"></h2>
-						<h2 class="text-center" id="money"></h2>
+						<p class="numbers text-center" id="days"></p>
+						<p class="numbers text-center" id="money"></p>
 				    </div>
 				    
 				    <div class="info col-lg-6 col-md-offset-3">
@@ -57,6 +61,28 @@
 	<div id="rightControl" class="control col-md-8">
 		<img id="rightArrow" class="arrow right" style="width:60px" src="/assets/arrowright2.png"></img>
 	</div>
+	<!-- Modal -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Welcome to The Mirror Paradox</h4>
+      </div>
+      <div class="modal-body">
+  		<ul>
+  			<li>If you could receive five hundred dollars tax-free right now, but in exchange, your life span is cut down by one day...</li>
+  			<li>Would you accept the offer? If so, how many days would you be willing to trade?</li>
+  			<li>Click and drag the slider to get started!</li>
+  		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
 
