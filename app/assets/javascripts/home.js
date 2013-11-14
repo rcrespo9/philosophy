@@ -136,4 +136,4 @@ $("#home").backstretch([
     "./assets/earthreflection.jpg", 
     "./assets/moonreflection.jpg",
     "./assets/future-room.jpg"   
-  ], {duration: 2000, fade: 750, centeredX: true});
+  ], {duration: 1250, fade: 750, centeredX: true});
