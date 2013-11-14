@@ -88,11 +88,11 @@ $(function(){
 			}
 			
 			$(this).next('#days').text(
-				days
+				days + ' days sold'
 			);
 
 			$(this).nextAll('#money').text(
-				money
+				money + ' earned'
 			);
 		}
 	});
