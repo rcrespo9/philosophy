@@ -152,7 +152,11 @@ class UsersController < ApplicationController
 
 	# Rescues for zero division error, returns avg.
 	def avg_me(total, count)
-		return total / count
+		if count == 0
+			return -50
+		else 
+			return total / count
+		end
 	rescue
 		0
 	end
