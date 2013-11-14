@@ -28,20 +28,25 @@ function createChart() {
 		labels : ["under 21","21-25","26-30","31-35","36-40","41-45","46-50", "51-55", "56-60", "61-65", "65+"],
 		datasets : [
 			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
+				fillColor : "rgba(255,102,102,0.5)",
+				strokeColor : "rgba(255,102,102,1)",
+				pointColor : "rgba(255,102,102,1)",
 				pointStrokeColor : "#fff",
 				data : female_array
 			},
 			{
-				fillColor : "rgba(151,187,205,0.5)",
-				strokeColor : "rgba(151,187,205,1)",
-				pointColor : "rgba(151,187,205,1)",
+				fillColor : "rgba(11,44,60,0.5)",
+				strokeColor : "rgba(11,44,60,1)",
+				pointColor : "rgba(11,44,60,1)",
 				pointStrokeColor : "#fff",
 				data : male_array
 			}
-		]
+		],
 	};
-	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+
+	var chartOptions = {
+		scaleFontColor: '#333745',
+		scaleLineColor: "rgba(51,55,69,.1)"
+	};
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData, chartOptions);
 }

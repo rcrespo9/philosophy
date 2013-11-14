@@ -16,7 +16,6 @@
 //= require bootstrap
 //= require backstretch
 //= require chart
-//= require knob
 //= require parallax
 //= require slider
 // require_tree .
