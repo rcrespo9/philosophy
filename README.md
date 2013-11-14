@@ -1,65 +1,37 @@
-Scope:
-	We are planning to build an app which will compel the user to put a price on their life. 
+#The Mirror Paradox
 
-Features & Technologies: 
-• D3 data visualization (library TBD).
 
-• Disqus comment board plugin
-• ShareThis plugin
-• Rails 4
-• MongoDB
-• RSPEC
-• Cucumber / Capybara
-• Capistrano
-• SCSS
-• Bootstrap
+*The Mirror Paradox* reflects a user's willingness to accept a price tag on their future. 
 
-Object Models:
-- User
 
-• Requester IP(TBD)
-• age: integer
-• gender: string
-• value: integer
+This application is built using Ruby 2.0.0 on Rails 4.0.0 and can be found on [www.themirrorparadox.com](http://[insertURL] "The Mirror Paradox").
+#Technologies Used:
+* Ruby 2.0.0
+* Rails 4.0.0
+* MongoDB 2.4
+* Mongoid 3
+* SASS Rails 4.0.0
+* Bootstrap 3
+* Cucumber 1.3.9
+* Capybara
+* RSPEC 2 on Rails 3
+* Pry
+* Pry-nav
+* Chart.js
+* Disqus.js
+* Knob.js
+* Parallax.js
+* Slider.js
+* [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/952354 "Pivotal Tracker Public Project")
 
-Wireframes: TBD
 
-Resources: TBD
+#Future Implementations
+* Enhance sophistication of validation process for rendering data.
+* Weighted averages to handle flagged user data rendering.
+* Additional visualization options on location, language, browser, OS, and other user environmental variables.
+* Utilization of D3 libraries to handle more robust visualization options.
+* Implementation of backbone and handlebars to allow seemless transition between multiple visualization templates.
 
-• Capybara:
-	http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Element
 
-• Cucumber:
-	http://cukes.info/
-
-• EC2 Deployment with Capistrano:
-	http://www.lauradhamilton.com/how-to-deploy-to-amazon-ec2-with-capistrano
-
-• IP Address requests:
-	http://stackoverflow.com/questions/3887943/ip-address-in-rails
-
-	http://stackoverflow.com/questions/1226959/how-to-get-client-ip-and-server-ip-using-rails/1227036#1227036
-
-• Mockingbird Wireframing:
-	https://gomockingbird.com/
-
-• Rake Tasks:
-	http://en.wikibooks.org/wiki/Ruby_on_Rails/Built-In_Rails_Tools/Make_your_own_rake_tasks
-
-• Rails 4:
-	http://moredevideas.wordpress.com/2013/04/26/rails-4-with-mongodb/
-
-• SASS:
-	http://sass-lang.com/
-
-• ShareThis:
-	http://www.sharethis.com/#sthash.BY1G2QyS.a2eSKnDY.dpbs
-
-• Twitter Bootstrap:
-	http://www.erikminkel.com/2013/09/01/twitter-bootstrap-3-in-a-rails-4-application/
-
-Milestones: Refer to PT
-
-- README.md
-- Link to hosted URL
-- Link to github source code
+#Contributions
+If you are interested in contributing to this project, please feel free to contact me!
