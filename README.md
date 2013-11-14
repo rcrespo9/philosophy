@@ -4,7 +4,7 @@
 *The Mirror Paradox* reflects a user's willingness to accept a price tag on their future. 
 
 
-This application is built using Ruby 2.0.0 on Rails 4.0.0 and can be found on [www.themirrorparadox.com](http://[insertURL] "The Mirror Paradox").
+This application is built using Ruby 2.0.0 on Rails 4.0.0 and can be found on [www.themirrorparadox.com](http://themirrorparadox.com/ "The Mirror Paradox").
 #Technologies Used:
 * Ruby 2.0.0
 * Rails 4.0.0

@@ -1,6 +1,8 @@
+// Establish global variables to handle ajax payloadReceiver
 var female_array = [];
 var male_array = [];
 
+// On /chart window load
 $(function(){
 	payloadReceiver();
 });
@@ -19,6 +21,7 @@ function payloadReceiver() {
 	});
 }
 
+// Constructor function to create line chart
 function createChart() {
 	// line graph
 	var lineChartData = {
