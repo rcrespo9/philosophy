@@ -34,8 +34,7 @@ $(function(){
 
 	//Sets the correct triggers for the arrows, plus arrow keys
 	function setRight(page, text){
-		$("#rightText").text(text);
-		$("#rightControl").show().unbind('click').click(function(){
+		$(".start-button").show().unbind('click').click(function(){
 			parallax[page].right();
 		});
 		rightKey = function(){
@@ -44,7 +43,6 @@ $(function(){
 	}
 
 	function setLeft(page, text){
-		$("#leftText").text(text);
 		$("#leftControl").show().unbind('click').click(function(){
 			parallax[page].left();
 		});
@@ -82,20 +80,18 @@ $(function(){
 		slide: function(){
 			var days = parseInt($(this).val());
 			var money = "$" + parseInt($(this).val()) * 500;
+			var transaction = $('#transaction');
 			if (days == "2001" && money > "$1000000") {
 				days = "+2000";
 				money = "+$1000000";
 			}
 			
-			$(this).next('#days').text(
-				'You will be selling ' + days + ' days for'
-			);
-
-			$(this).nextAll('#money').text(
-				'a grand total of ' + money + '.'
+			$('#transaction').text(
+				'You will be selling ' + days + ' days for' + ' a grand total of ' + money + '.'
 			);
 		}
 	});
+
 	// submit onclick event
 	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());

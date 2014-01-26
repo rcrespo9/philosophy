@@ -1,3 +1,4 @@
+@import 'flash';
 @import 'home';
 $selectioncolor: #333745;
 
@@ -7,80 +8,33 @@ $selectioncolor: #333745;
 	min-width: 100%;
 	font-family: $bodyfont;
 	color: $selectioncolor;
-}
 
-#selection-header {
-	font-family: $headerfont;
-	text-transform: uppercase;
-	font-size: 3em;
-}
+	#selection-header {
+		font-family: $headerfont;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 3em;
+	}
 
-.value-slider {
-	margin-top: 10%;
-}
+	.survey {
+		margin-top: 4%;
+	}
 
-.info {
-	margin-top: 8%;
-	clear: both;
-	display: inline-block;
-	padding-left: 55px;
-	position: absolute;
-}
+	.numbers {
+		font-size: 1.4em;
+		margin-top: 5%;
+	}
 
-#money {
-	line-height: 4em;
-}
+	.gender {
+		margin-top: 10%;
+		margin-bottom: 10%;
+		label {
+			margin-bottom: 6px;
+		}
+	}
 
-.age-dropdown {
-	float: left;
-}
 
-.gender-div {
-	float: right;
-}
-
-.gender-header {
-	font-size: 1.7em;
-	font-weight: bold;
-}
-
-.gender-label {
-	font-size: 1.3em;
-}
-
-.numbers {
-	position: absolute;
-	margin-left: 500px;
-	font-size: 1.6em;
-}
-
-#submit-button {
-	position: absolute;
-	clear: both;
-	margin-left: 45%;
-	margin-top: 21%;
-}
-
-.read-me {
-	float: right;
-	top: 0;
-	right: 0;
-	position: absolute;
-	padding: 10px 15px;
-}
-
-button {
-	display: block;
-	width: 150px;
-	text-align: center;
-	text-transform: uppercase;
-	background-color: #193441;
-	font-size: 13px;
-	padding: 20px 25px;
-	color: #fff;
-	font-weight: 300;
-	letter-spacing: 1px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	#submit-button {
+		margin-top: 21%;
+	}
 }
