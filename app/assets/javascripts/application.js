@@ -17,4 +17,5 @@
 //= require chart
 //= require parallax
 //= require slider
+//= require bootbox.min
 // require_tree .

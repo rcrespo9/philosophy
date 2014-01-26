@@ -97,16 +97,17 @@ $(function(){
 		var days = parseInt($('.noUiSlider').val());
 		var age = $('#age option:selected').val();
 		if (age === ""){
-			alert("Please select an age range.");
+			bootbox.alert("Please select an age range.");
 		}
 		var gender = $('input[name=gender]:checked').val();
 
 		if (age != '') {
-		var confirmation = confirm("Are you sure you want to proceed? If so, click OK to explain your decision and see other verified responses!");
-			if (confirmation == true) {
-			feedDB();
-			}
-		}
+			bootbox.confirm("Are you sure you want to proceed? If so, click OK to explain your decision and see other verified responses!", function(result) {
+				if (result == true) {
+					feedDB();
+				};
+			});
+		};
 	});
 });
 
