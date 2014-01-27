@@ -19,15 +19,15 @@
 
 					<div class="noUiSlider"></div>
 
-					<div class="age-range">
-				    	<p class="pull-left input-description" id="age-select">Age Range:</p>
-				    	<div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-8 col-xs-8">
+					<div class="age-range text-left">
+				    	<p class="input-description">Age Range</p>
+				    	<div class="select-age">
 				    		<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age", class: 'form-control input-sm')%>
 				    	</div>
 				    </div>
 		    
-			    	<div class="gender-div">
-			    		<p class="pull-left input-description" id="gender-radio">Gender:</p>
+			    	<div class="gender-div text-left">
+			    		<p class="input-description">Gender</p>
 			    		<label class="radio-inline" name="male" for="gender">
 			    			<%= radio_button_tag(:gender, "Male") %>
 			    			Male

@@ -77,6 +77,7 @@ $(function(){
 		range: ["0", "2001"],
 		start: "0",
 		handles: 1,
+		connect: "lower",
 		slide: function(){
 			var days = parseInt($(this).val()),
 				money = "$" + parseInt($(this).val()) * 500,
