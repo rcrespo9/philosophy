@@ -78,17 +78,18 @@ $(function(){
 		start: "0",
 		handles: 1,
 		slide: function(){
-			var days = parseInt($(this).val());
-			var money = "$" + parseInt($(this).val()) * 500;
-			var transaction = $('#transaction');
+			var days = parseInt($(this).val()),
+				money = "$" + parseInt($(this).val()) * 500,
+				amountDays = $('#days'),
+				amountMoney = $('#money');
+			
 			if (days == "2001" && money > "$1000000") {
 				days = "+2000";
 				money = "+$1000000";
 			}
 			
-			$('#transaction').text(
-				'You will be selling ' + days + ' days for' + ' a grand total of ' + money + '.'
-			);
+			amountDays.text(days);
+			amountMoney.text(money);
 		}
 	});
 
@@ -133,3 +134,8 @@ $("#home").backstretch([
     "./assets/moonreflection.jpg",
     "./assets/future-room.jpg"   
   ], {duration: 1250, fade: 750, centeredX: true});
+
+// gender buttons
+$('input[name=gender]:radio').iCheck({
+	radioClass: 'iradio_square-blue'
+});

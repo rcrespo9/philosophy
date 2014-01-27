@@ -16,23 +16,28 @@ $selectioncolor: #333745;
 		font-size: 3em;
 	}
 
-	.survey {
-		margin-top: 4%;
-	}
-
 	.numbers {
 		font-size: 1.4em;
+		margin-top: 7%;
+	}
+
+	.survey {
 		margin-top: 5%;
 	}
 
-	.gender {
+	.gender-div {
 		margin-top: 10%;
 		margin-bottom: 10%;
-		label {
-			margin-bottom: 6px;
+		.inquiry {
+			padding-right: 20px;
 		}
 	}
 
+	.age-range {
+		.form-control {
+			font-size: .95em;
+		}
+	}
 
 	#submit-button {
 		margin-top: 21%;

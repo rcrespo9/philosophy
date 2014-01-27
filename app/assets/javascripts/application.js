@@ -18,4 +18,5 @@
 //= require parallax
 //= require slider
 //= require bootbox.min
+//= require iCheck
 // require_tree .
