@@ -80,6 +80,9 @@ $selectioncolor: #083967;
 	}
 
 	#submit-button {
-		margin-top: 15%;
+		margin-top: 10%;
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+ 			margin-top: 18%;
+  		}
 	}
 }
