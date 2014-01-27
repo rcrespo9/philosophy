@@ -24,11 +24,11 @@ $selectioncolor: #083967;
 	}
 
 	.numbers {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		margin-top: 7%;
 		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
     		margin-top: 13%;
-    		font-size: .85em;
+    		font-size: .81em;
   		}
   		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: landscape) {
     		font-size: 1.2em;
@@ -51,16 +51,19 @@ $selectioncolor: #083967;
 	}
 
 	label {
-		font-size: .857em
+		font-size: .757em
 	}
 
 	select {
 		color: $selectioncolor;
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+			font-size: .757em;
+  		}
 	}
 
 	.input-description {
 		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-			font-size: .9em;
+			font-size: .8em;
   		}
 	}
 
