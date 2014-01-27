@@ -6,7 +6,7 @@
 			<a href="#selection" class="start-button control">Start Now &nbsp;<i class="fa fa-long-arrow-right"></i></a>
 	</header>
 
-	<div id="selector">
+	<div id="selectionPage">
 		<div class="container-fluid selection text-center">
 			<h2 id="selection-header">Make Your Choice</h1>
 
@@ -18,35 +18,39 @@
 				<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
 					<div class="noUiSlider"></div>
+
+					<div class="age-range">
+				    	<p class="pull-left input-description" id="age-select">Age Range:</p>
+				    	<div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-8 col-xs-8">
+				    		<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age", class: 'form-control input-sm')%>
+				    	</div>
+				    </div>
 		    
 			    	<div class="gender-div">
-			    		<p class="pull-left">Gender:</p>
-			    		<label class="gender-label radio-inline" for="gender">
-			    			<%= radio_button_tag(:gender, "Male", class: 'gender-radio') %>
+			    		<p class="pull-left input-description" id="gender-radio">Gender:</p>
+			    		<label class="radio-inline" name="male" for="gender">
+			    			<%= radio_button_tag(:gender, "Male") %>
 			    			Male
 			    		</label>
 
 			    		
-					    <label class="gender-label radio-inline" for="gender">
-					    	<%= radio_button_tag(:gender, "Female", class: 'gender-radio' ) %>
+					    <label class="radio-inline" name="female" for="gender">
+					    	<%= radio_button_tag(:gender, "Female" ) %>
 					    	Female
 					    </label>
 				    </div>
 
-				    <div class="age-range">
-				    	<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age", class: 'form-control')%>
-				    </div>
+				   
 
 					<div id="submit-button">
 					    <button id="submit_value" class="btn btn-primary">Submit</button>
 					</div>
+
 		    	</div>
 			</section>
-
-		</div>
-	</div>
-
-</div>
+		</div><!-- /container fluid -->
+	</div><!-- /selection page -->
+</div><!-- /wrapper -->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

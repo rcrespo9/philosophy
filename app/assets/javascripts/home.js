@@ -12,7 +12,7 @@ $(function(){
 		}
 	});
 
-	parallax.add($("#selector"))
+	parallax.add($("#selectionPage"))
 			.add($("#home"));
 
 	parallax.background = $("body");
@@ -25,10 +25,10 @@ $(function(){
 
 	//Setting up page navigation
 	parallax.home.onload=function(){
-		setRight("selector", "Start");
+		setRight("selectionPage", "Start");
 	};
 
-	parallax.selector.onload=function(){
+	parallax.selectionPage.onload=function(){
 		setLeft("home", "Home");
 	};
 
@@ -82,7 +82,7 @@ $(function(){
 				money = "$" + parseInt($(this).val()) * 500,
 				amountDays = $('#days'),
 				amountMoney = $('#money');
-			
+
 			if (days == "2001" && money > "$1000000") {
 				days = "+2000";
 				money = "+$1000000";

@@ -1,8 +1,9 @@
 @import 'flash';
 @import 'home';
+@import 'media-queries';
 $selectioncolor: #333745;
 
-#selector {
+#selectionPage {
 	background-color: #fff;
 	min-height: 100%;
 	min-width: 100%;
@@ -14,32 +15,51 @@ $selectioncolor: #333745;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 3em;
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+    		font-size: 2em;
+  		}
 	}
 
 	.numbers {
 		font-size: 1.4em;
 		margin-top: 7%;
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+    		margin-top: 13%;
+    		font-size: .85em;
+  		}
 	}
 
 	.survey {
 		margin-top: 5%;
 	}
 
-	.gender-div {
-		margin-top: 10%;
-		margin-bottom: 10%;
-		.inquiry {
-			padding-right: 20px;
-		}
+	.noUiSlider {
+		margin-bottom: 11%;
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+    		margin-top: 13%;
+    		margin-bottom: 20%;
+  		}
 	}
 
-	.age-range {
-		.form-control {
-			font-size: .95em;
+
+	.gender-div {
+		margin-top: 30%;
+		/*margin-bottom: 10%;*/
+		#gender-radio {
+			position: absolute;
 		}
+		label[name="male"] {
+			padding-left: 0;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+        		padding-left: 60px;
+      		}
+		}
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+    		margin-top: 50%;
+  		}
 	}
 
 	#submit-button {
-		margin-top: 21%;
+		margin-top: 15%;
 	}
 }
