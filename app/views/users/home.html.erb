@@ -1,89 +1,79 @@
-<body class="background">
+<div class="wrapper">
+	
+	<header class="text-center" id="home">
+			<h1 id="marketing">The Mirror Paradox</h1>
+			<p class="lead">Would you put a price on your future?</p>
+			<a href="#selection" class="start-button control">Start Now &nbsp;<i class="fa fa-long-arrow-right"></i></a>
+	</header>
 
-	<div class="wrapper">
-		
-		<div id="home">
-			<div class="col-lg-12">
-				<h1 class="text-center" id="marketing">The Mirror Paradox</h1>
-				<p class="text-center lead">Would you put a price on your future?</p>
-			</div>
-		</div>
+	<div id="selectionPage">
+		<div class="container-fluid selection text-center">
+			<h2 id="selection-header">Make Your Choice &nbsp;<i class="fa fa-chevron-circle-down animated flash" data-toggle="modal" data-target="#myModal" id="modal-button"></i></h1>
 
-		<div id="selector">
-			<div class="container-fluid selection">
-				<div class="row-fluid">
-					<h1 class="col-lg-12 text-center" id="selection-header">Make Your Choice</h1>
-					<!-- Button trigger modal -->
-				<button class="read-me submit-button animated flash" data-toggle="modal" data-target="#myModal">
-				  Read me
-				</button>
+			<section class="numbers">
+				<p id="transaction">You will be selling <b id="days">0</b> days for a grand total of <b id="money">$0</b>.</p>
+			</section>	
 
-					
-					<div class="value-slider col-lg-12 col-lg-offset-4">
-						<div class="noUiSlider"></div>
-						<p class="numbers text-center" id="days"></p>
-						<p class="numbers text-center" id="money"></p>
+			<section class="survey row-fluid">		
+				<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+
+					<div class="noUiSlider"></div>
+
+					<div class="age-range text-left">
+				    	<p class="input-description">Age Range</p>
+				    	<div class="select-age">
+				    		<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age", class: 'form-control input-sm')%>
+				    	</div>
 				    </div>
-				    
-				    <div class="info col-lg-6 col-md-offset-3">
-					    <div class="age-dropdown">
-					    	<p class="gender-header">Select your age range.</p>
-					    	<%= select_tag(:age, options_for_select(['under 21', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56-60', '61-65', '+65']), prompt: "Select Age")%>
-					    </div>
-					    <div class="gender-div">
-					    	<p class="gender-header">Select your gender.</p>
-						    <%= radio_button_tag(:gender, "Male", class: 'gender') %>
-							<%= label_tag(:gender, "Male", class: 'gender-label') %>
-							<br>
-							<%= radio_button_tag(:gender, "Female", class: 'gender') %>
-							<%= label_tag(:gender, "Female", class: 'gender-label')%>
-					    </div>
+		    
+			    	<div class="gender-div text-left">
+			    		<p class="input-description">Gender</p>
+			    		<label class="radio-inline" name="male" for="gender">
+			    			<%= radio_button_tag(:gender, "Male") %>
+			    			Male
+			    		</label>
+
+			    		
+					    <label class="radio-inline" name="female" for="gender">
+					    	<%= radio_button_tag(:gender, "Female" ) %>
+					    	Female
+					    </label>
 				    </div>
-				</div>
-			</div>
-			
-			<div class="container-fluid button">
-				<div class="row-fluid">
+
+				   
+
 					<div id="submit-button">
-					    <button id="submit_value">Submit</button>
+					    <button id="submit_value" class="btn btn-primary">Submit</button>
 					</div>
-				</div>
-			</div>
 
-		</div>
+		    	</div>
+			</section>
+		</div><!-- /container fluid -->
+	</div><!-- /selection page -->
+</div><!-- /wrapper -->
 
-	</div>
-
-	<div id="leftControl" class="control">
-		<img id="leftArrow" class="arrow left" style="width:60px" src="/assets/arrowleft2.png"></img>
-	</div>
-
-	<div id="rightControl" class="control col-md-8">
-		<img id="rightArrow" class="arrow right" style="width:60px" src="/assets/arrowright2.png"></img>
-	</div>
-	<!-- Modal -->
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Welcome to The Mirror Paradox</h4>
+        <h4 class="modal-title">Welcome to The Mirror Paradox</h4>
       </div>
       <div class="modal-body">
-  		<ul>
+          <ul>
   			<li>If you could receive five hundred dollars tax-free right now, but in exchange, your life span is cut down by one day...</li>
   			<li>Would you accept the offer? If so, how many days would you be willing to trade?</li>
   			<li>Click and drag the slider to get started!</li>
   		</ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-    <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
 
-</body>
+<%= javascript_include_tag "home", "data-turbolinks-track" => true %>
+

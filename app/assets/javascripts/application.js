@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
 //= require backstretch
 //= require chart
 //= require parallax
 //= require slider
+//= require bootbox.min
+//= require iCheck
 // require_tree .

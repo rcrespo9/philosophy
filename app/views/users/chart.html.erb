@@ -1,37 +1,48 @@
-<%= javascript_include_tag "charts", "data-turbolinks-track" => true %>
+<div class="container-fluid" id="chart-page">
+
+	<a href="/" id="home-button"><i class="fa fa-home fa-3x visible-lg visible-md"></i></a>
+	<a href="/" id="home-button"><i class="fa fa-home fa-2x hidden-lg hidden-md"></i></a>
+	<h2 class="text-center" id="data-header">The Mirror Paradox Visualized</h2>
+	<div class="row-fluid">
+
+		<div class="addthis_toolbox addthis_floating_style addthis_32x32_style visible-lg visible-md" id="social-media">
+			<a class="addthis_button_facebook" addthis:url="http://www/themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_twitter" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_linkedin" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_email" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_compact" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+		</div>
+
+		<div class="addthis_toolbox addthis_floating_style addthis_16x16_style hidden-lg hidden-md" id="social-media">
+			<a class="addthis_button_facebook" addthis:url="http://www/themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_twitter" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_linkedin" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_email" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+			<a class="addthis_button_compact" addthis:url="http://themirrorparadox.com" addthis:title="The Mirror Paradox"></a>
+		</div>
+
+		<figure id="chart" class="text-center">
+			<div class='legend-scale'>
+			  <figcaption>Average Amount of Days Sold by Age Group</figcaption>
+		    </div>
+			<canvas id="canvas" height="500" width="667"></canvas>
+			<ul class='legend-labels'>
+			    <li><span id="male-legend"></span>Males</li>
+			    <li id="females"><span id="female-legend"></span>Females</li>
+			</ul>
+		</figure>
+
+		<section class="comment-section col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+			<p id="note" class="text-center">Feel free to explain the rationale behind your choices in the comments section below. And to inspire even more discussion, don't forget to share this with family and friends!</p>
+			<div id="disqus_thread"></div>
+		</section>
+
+	</div>
+</div>
+
+<%= javascript_include_tag "visualization", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "disqus", "data-turbolinks-track" => true %>
 
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "4ed9e27d-b2ec-4492-b592-fbc3e5b00d84", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-
-<div id="chart-page">
-	<a href="/"><button id="back-home">The Mirror Paradox</button></a>
-	<!-- social media icons -->
-	<div id="social-media">
-		<span class='st_facebook_large' st_url="http://www.themirrorparadox.com" st_title="The Mirror Paradox" st_image="assets/screenshot.png" displayText='Facebook'></span>
-		<span class='st_twitter_large' st_url="http://www.themirrorparadox.com" st_title="The Mirror Paradox" st_image="assets/screenshot.png" displayText='Tweet'></span>
-		<span class='st_linkedin_large' st_url="http://www.themirrorparadox.com" st_title="The Mirror Paradox" st_image="assets/screenshot.png" displayText='LinkedIn'></span>
-		<span class='st_email_large' st_url="http://www.themirrorparadox.com" st_title="The Mirror Paradox" st_image="assets/screenshot.png" displayText='Email'></span>
-	</div>
-	<!-- social media icons end -->
-
-	<!-- line chart -->
-	<div id="chart">
-		<h2 class="data-header col-md-offset-1">Average Amount of Days Chosen by Age Group</h2>
-		<canvas id="canvas" height="600" width="800"></canvas>
-		<div class="my-legend">
-			<div class='legend-scale'>
-			  <ul class='legend-labels'>
-			    <li><span style='background:#0B2C3C;'></span>Males</li>
-			    <li><span style='background:#FF6666;'></span>Females</li>
-			  </ul>
-		    </div>
-	    </div>
-	</div>
-	<!-- line chart end -->
-
-	<!-- disqus comment section -->
-	<p id="note" class="text-center col-md-offset-4">Feel free to explain the rationale behind your choices in the comments section below. And to inspire even more discussion, don't forget to share this with family and friends!</p>
-	<div id="disqus_thread"></div>
-	<!-- disqus comment section end -->
-</div>
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52e6f99702bb64bf"></script>
+<!-- AddThis Button END -->

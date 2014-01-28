@@ -12,7 +12,7 @@ $(function(){
 		}
 	});
 
-	parallax.add($("#selector"))
+	parallax.add($("#selectionPage"))
 			.add($("#home"));
 
 	parallax.background = $("body");
@@ -25,17 +25,16 @@ $(function(){
 
 	//Setting up page navigation
 	parallax.home.onload=function(){
-		setRight("selector", "Start");
+		setRight("selectionPage", "Start");
 	};
 
-	parallax.selector.onload=function(){
+	parallax.selectionPage.onload=function(){
 		setLeft("home", "Home");
 	};
 
 	//Sets the correct triggers for the arrows, plus arrow keys
 	function setRight(page, text){
-		$("#rightText").text(text);
-		$("#rightControl").show().unbind('click').click(function(){
+		$(".start-button").show().unbind('click').click(function(){
 			parallax[page].right();
 		});
 		rightKey = function(){
@@ -44,7 +43,6 @@ $(function(){
 	}
 
 	function setLeft(page, text){
-		$("#leftText").text(text);
 		$("#leftControl").show().unbind('click').click(function(){
 			parallax[page].left();
 		});
@@ -79,38 +77,39 @@ $(function(){
 		range: ["0", "2001"],
 		start: "0",
 		handles: 1,
+		connect: "lower",
 		slide: function(){
-			var days = parseInt($(this).val());
-			var money = "$" + parseInt($(this).val()) * 500;
+			var days = parseInt($(this).val()),
+				money = "$" + parseInt($(this).val()) * 500,
+				amountDays = $('#days'),
+				amountMoney = $('#money');
+
 			if (days == "2001" && money > "$1000000") {
 				days = "+2000";
 				money = "+$1000000";
 			}
 			
-			$(this).next('#days').text(
-				'You will be selling ' + days + ' days for'
-			);
-
-			$(this).nextAll('#money').text(
-				'a grand total of ' + money + '.'
-			);
+			amountDays.text(days);
+			amountMoney.text(money);
 		}
 	});
+
 	// submit onclick event
 	$('#submit_value').on("click", function(){
 		var days = parseInt($('.noUiSlider').val());
 		var age = $('#age option:selected').val();
 		if (age === ""){
-			alert("Please select an age range.");
+			bootbox.alert("Please select an age range.");
 		}
 		var gender = $('input[name=gender]:checked').val();
 
 		if (age != '') {
-		var confirmation = confirm("Are you sure you want to proceed? If so, click OK to explain your decision and see other verified responses!");
-			if (confirmation == true) {
-			feedDB();
-			}
-		}
+			bootbox.confirm("Are you sure you want to proceed? If so, click OK to explain your decision and see other verified responses!", function(result) {
+				if (result == true) {
+					feedDB();
+				};
+			});
+		};
 	});
 });
 
@@ -132,7 +131,12 @@ function feedDB() {
 
 // background slide
 $("#home").backstretch([
-    "./assets/earthreflection.jpg", 
-    "./assets/moonreflection.jpg",
+	"./assets/moonreflection.jpg",
+    "./assets/earthreflection.jpg",
     "./assets/future-room.jpg"   
   ], {duration: 1250, fade: 750, centeredX: true});
+
+// gender buttons
+$('input[name=gender]:radio').iCheck({
+	radioClass: 'iradio_square-blue'
+});
