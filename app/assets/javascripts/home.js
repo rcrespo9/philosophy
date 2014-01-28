@@ -131,8 +131,8 @@ function feedDB() {
 
 // background slide
 $("#home").backstretch([
-    "./assets/earthreflection.jpg", 
-    "./assets/moonreflection.jpg",
+	"./assets/moonreflection.jpg",
+    "./assets/earthreflection.jpg",
     "./assets/future-room.jpg"   
   ], {duration: 1250, fade: 750, centeredX: true});
 

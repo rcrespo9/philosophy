@@ -2,6 +2,7 @@
 @import 'home';
 @import 'media-queries';
 $selectioncolor: #083967;
+$subheadersize: 2.5em;
 
 #selectionPage {
 	background-color: #fff;
@@ -10,82 +11,92 @@ $selectioncolor: #083967;
 	font-family: $bodyfont;
 	color: $selectioncolor;
 
-	#selection-header {
-		font-family: $headerfont;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 3em;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-    		font-size: 2em;
-  		}
-  		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: landscape) {
-    		font-size: 2.5em;
-  		}
-	}
+	.selection {
+		margin-top: 3%;
+		@media #{$media} and ($feature-min: $tablet-min) and ($feature-max: $tablet-max) and (orientation: portrait) {
+		margin-top: 15%;
+		}
+		@media #{$media} and ($feature-min: $tablet-min) and ($feature-max: $tablet-max) and (orientation: landscape) {
+		margin-top: 10%;
+		}
+		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) {
+		margin-top: 13%;
+		}
 
-	.numbers {
-		font-size: 1.3em;
-		margin-top: 7%;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-    		margin-top: 13%;
-    		font-size: .81em;
-  		}
-  		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: landscape) {
-    		font-size: 1.2em;
-  		}
-	}
+		#selection-header {
+			font-family: $headerfont;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: $subheadersize;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+	    		font-size: 2em;
+	  		}
+		}
 
-	.survey {
-		margin-top: 5%;
-	}
+		.numbers {
+			font-size: 1.3em;
+			margin-top: 7%;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+	    		margin-top: 13%;
+	    		font-size: .81em;
+	  		}
+	  		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: landscape) {
+	    		font-size: 1.2em;
+	  		}
+		}
 
-	.noUiSlider {
-		margin-bottom: 11%;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-    		margin-top: 13%;
-    		margin-bottom: 20%;
-  		}
-  		.noUi-connect {
-			background: #428bca;
+		.survey {
+			margin-top: 5%;
+		}
+
+		.noUiSlider {
+			margin-bottom: 11%;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+	    		margin-top: 13%;
+	    		margin-bottom: 20%;
+	  		}
+	  		.noUi-connect {
+				background: #428bca;
+			}
+		}
+
+		label {
+			font-size: .757em
+		}
+
+		select {
+			color: $selectioncolor;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+				font-size: .757em;
+	  		}
+		}
+
+		.input-description {
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+				font-size: .8em;
+	  		}
+		}
+
+		.gender-div {
+			margin-top: 10%;
+			label[name="male"] {
+				padding-left: 0;
+	  		}
+		}
+
+		.select-age {
+			width: 74%;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+	 			width: 90%;
+	  		}
+		}
+
+		#submit-button {
+			margin-top: 10%;
+			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
+	 			margin-top: 18%;
+	  		}
 		}
 	}
-
-	label {
-		font-size: .757em
-	}
-
-	select {
-		color: $selectioncolor;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-			font-size: .757em;
-  		}
-	}
-
-	.input-description {
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
-			font-size: .8em;
-  		}
-	}
-
-
-	.gender-div {
-		margin-top: 10%;
-		label[name="male"] {
-			padding-left: 0;
-  		}
-	}
-
-	.select-age {
-		width: 74%;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
- 			width: 90%;
-  		}
-	}
-
-	#submit-button {
-		margin-top: 10%;
-		@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
- 			margin-top: 18%;
-  		}
-	}
+		
 }
