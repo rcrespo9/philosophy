@@ -8,6 +8,22 @@ $visualizationcolor: #333745;
 	min-width: 100%;
 	color: $visualizationcolor;
 	font-family: $bodyfont;
+
+	#home-button {
+		position: fixed;
+		top: 0;
+		left: 5px;
+		color: $visualizationcolor;
+		text-decoration: none;
+		i {
+			&:hover {
+				color: #AB1A25;
+			}
+			&:visited {
+				color: $visualizationcolor;
+			}
+		}
+	}
 	
 	#data-header {
 		font-family: $headerfont;

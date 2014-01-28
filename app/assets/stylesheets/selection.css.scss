@@ -11,6 +11,7 @@ $subheadersize: 2.5em;
 	font-family: $bodyfont;
 	color: $selectioncolor;
 
+
 	.selection {
 		margin-top: 3%;
 		@media #{$media} and ($feature-min: $tablet-min) and ($feature-max: $tablet-max) and (orientation: portrait) {
@@ -31,6 +32,12 @@ $subheadersize: 2.5em;
 			@media #{$media} and ($feature-min: $phone-min) and ($feature-max: $phone-max) and (orientation: portrait) {
 	    		font-size: 2em;
 	  		}
+	  		#modal-button {
+				cursor: pointer;
+				&:hover {
+					color: #BF2A2A;
+				}
+			}
 		}
 
 		.numbers {
